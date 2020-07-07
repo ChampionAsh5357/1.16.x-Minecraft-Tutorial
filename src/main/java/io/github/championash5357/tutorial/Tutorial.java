@@ -21,12 +21,15 @@ public class Tutorial {
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus(),
 				forgeEventBus = MinecraftForge.EVENT_BUS;
 		
-		//Proxy Setup
+		//Basic Setup
 		PROXY.setup(modEventBus, forgeEventBus);
+		addRegistries(modEventBus);
 		
 		//Mod Event Bus Listeners
 		modEventBus.addListener(this::commonSetup);
 	}
 	
 	private void commonSetup(final FMLCommonSetupEvent event) {}
+	
+	private void addRegistries(final IEventBus modEventBus) {}
 }
