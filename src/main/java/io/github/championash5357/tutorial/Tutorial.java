@@ -1,6 +1,7 @@
 package io.github.championash5357.tutorial;
 
 import io.github.championash5357.tutorial.client.proxy.ClientProxy;
+import io.github.championash5357.tutorial.init.TutorialItems;
 import io.github.championash5357.tutorial.proxy.IProxy;
 import io.github.championash5357.tutorial.server.proxy.ServerProxy;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,5 +32,7 @@ public class Tutorial {
 	
 	private void commonSetup(final FMLCommonSetupEvent event) {}
 	
-	private void addRegistries(final IEventBus modEventBus) {}
+	private void addRegistries(final IEventBus modEventBus) {
+		TutorialItems.ITEMS.register(modEventBus);
+	}
 }
