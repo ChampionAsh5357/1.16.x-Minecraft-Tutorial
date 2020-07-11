@@ -1,6 +1,7 @@
 package io.github.championash5357.tutorial;
 
 import io.github.championash5357.tutorial.client.proxy.ClientProxy;
+import io.github.championash5357.tutorial.data.TutorialRecipeProvider;
 import io.github.championash5357.tutorial.init.TutorialBlocks;
 import io.github.championash5357.tutorial.init.TutorialItems;
 import io.github.championash5357.tutorial.proxy.IProxy;
@@ -43,5 +44,9 @@ public class Tutorial {
 	
 	private void gatherData(final GatherDataEvent event) {
 		DataGenerator gen = event.getGenerator();
+		
+		if(event.includeServer()) {
+			gen.addProvider(new TutorialRecipeProvider(gen));
+		}
 	}
 }
