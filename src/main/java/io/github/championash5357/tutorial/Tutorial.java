@@ -5,11 +5,13 @@ import io.github.championash5357.tutorial.init.TutorialBlocks;
 import io.github.championash5357.tutorial.init.TutorialItems;
 import io.github.championash5357.tutorial.proxy.IProxy;
 import io.github.championash5357.tutorial.server.proxy.ServerProxy;
+import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(Tutorial.ID)
@@ -29,6 +31,7 @@ public class Tutorial {
 		
 		//Mod Event Bus Listeners
 		modEventBus.addListener(this::commonSetup);
+		modEventBus.addListener(this::gatherData);
 	}
 	
 	private void commonSetup(final FMLCommonSetupEvent event) {}
@@ -36,5 +39,9 @@ public class Tutorial {
 	private void addRegistries(final IEventBus modEventBus) {
 		TutorialBlocks.BLOCKS.register(modEventBus);
 		TutorialItems.ITEMS.register(modEventBus);
+	}
+	
+	private void gatherData(final GatherDataEvent event) {
+		DataGenerator gen = event.getGenerator();
 	}
 }
