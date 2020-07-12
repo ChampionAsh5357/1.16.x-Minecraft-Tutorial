@@ -1,6 +1,7 @@
 package io.github.championash5357.tutorial;
 
 import io.github.championash5357.tutorial.client.proxy.ClientProxy;
+import io.github.championash5357.tutorial.data.TutorialLanguageProvider;
 import io.github.championash5357.tutorial.data.TutorialRecipeProvider;
 import io.github.championash5357.tutorial.init.TutorialBlocks;
 import io.github.championash5357.tutorial.init.TutorialItems;
@@ -21,6 +22,12 @@ public class Tutorial {
 	public static final String ID = "tutorial";
 	
 	public static final IProxy PROXY = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> ServerProxy::new);
+	
+	private static final String[] LOCALE_CODES = new String[] {
+			"en_us",
+			"es_es",
+			"fr_fr"
+	};
 	
 	public Tutorial() {
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus(),
@@ -45,8 +52,17 @@ public class Tutorial {
 	private void gatherData(final GatherDataEvent event) {
 		DataGenerator gen = event.getGenerator();
 		
+		if(event.includeClient()) {
+			addLanguageProviders(gen);
+		}
 		if(event.includeServer()) {
 			gen.addProvider(new TutorialRecipeProvider(gen));
+		}
+	}
+	
+	private void addLanguageProviders(DataGenerator gen) {
+		for(String locale : LOCALE_CODES) {
+			gen.addProvider(new TutorialLanguageProvider(gen, locale));
 		}
 	}
 }
