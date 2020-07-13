@@ -1,6 +1,8 @@
 package io.github.championash5357.tutorial;
 
 import io.github.championash5357.tutorial.client.proxy.ClientProxy;
+import io.github.championash5357.tutorial.data.TutorialBlockStateProvider;
+import io.github.championash5357.tutorial.data.TutorialItemModelProvider;
 import io.github.championash5357.tutorial.data.TutorialLanguageProvider;
 import io.github.championash5357.tutorial.data.TutorialRecipeProvider;
 import io.github.championash5357.tutorial.init.TutorialBlocks;
@@ -8,6 +10,7 @@ import io.github.championash5357.tutorial.init.TutorialItems;
 import io.github.championash5357.tutorial.proxy.IProxy;
 import io.github.championash5357.tutorial.server.proxy.ServerProxy;
 import net.minecraft.data.DataGenerator;
+import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
@@ -53,7 +56,11 @@ public class Tutorial {
 		DataGenerator gen = event.getGenerator();
 		
 		if(event.includeClient()) {
+			ExistingFileHelper helper = event.getExistingFileHelper();
+			
 			addLanguageProviders(gen);
+			gen.addProvider(new TutorialItemModelProvider(gen, helper));
+			gen.addProvider(new TutorialBlockStateProvider(gen, helper));
 		}
 		if(event.includeServer()) {
 			gen.addProvider(new TutorialRecipeProvider(gen));
