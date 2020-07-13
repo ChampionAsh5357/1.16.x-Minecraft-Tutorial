@@ -4,6 +4,7 @@ import io.github.championash5357.tutorial.client.proxy.ClientProxy;
 import io.github.championash5357.tutorial.data.TutorialBlockStateProvider;
 import io.github.championash5357.tutorial.data.TutorialItemModelProvider;
 import io.github.championash5357.tutorial.data.TutorialLanguageProvider;
+import io.github.championash5357.tutorial.data.TutorialLootTableProvider;
 import io.github.championash5357.tutorial.data.TutorialRecipeProvider;
 import io.github.championash5357.tutorial.init.TutorialBlocks;
 import io.github.championash5357.tutorial.init.TutorialItems;
@@ -64,6 +65,7 @@ public class Tutorial {
 		}
 		if(event.includeServer()) {
 			gen.addProvider(new TutorialRecipeProvider(gen));
+			gen.addProvider(new TutorialLootTableProvider(gen));
 		}
 	}
 	
