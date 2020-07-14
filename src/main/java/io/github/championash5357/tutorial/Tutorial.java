@@ -2,7 +2,9 @@ package io.github.championash5357.tutorial;
 
 import io.github.championash5357.tutorial.client.proxy.ClientProxy;
 import io.github.championash5357.tutorial.data.TutorialBlockStateProvider;
+import io.github.championash5357.tutorial.data.TutorialBlockTagsProvider;
 import io.github.championash5357.tutorial.data.TutorialItemModelProvider;
+import io.github.championash5357.tutorial.data.TutorialItemTagsProvider;
 import io.github.championash5357.tutorial.data.TutorialLanguageProvider;
 import io.github.championash5357.tutorial.data.TutorialLootTableProvider;
 import io.github.championash5357.tutorial.data.TutorialRecipeProvider;
@@ -64,6 +66,10 @@ public class Tutorial {
 			gen.addProvider(new TutorialBlockStateProvider(gen, helper));
 		}
 		if(event.includeServer()) {
+			TutorialBlockTagsProvider block_tags = new TutorialBlockTagsProvider(gen);
+			
+			gen.addProvider(block_tags);
+			gen.addProvider(new TutorialItemTagsProvider(gen, block_tags));
 			gen.addProvider(new TutorialRecipeProvider(gen));
 			gen.addProvider(new TutorialLootTableProvider(gen));
 		}
