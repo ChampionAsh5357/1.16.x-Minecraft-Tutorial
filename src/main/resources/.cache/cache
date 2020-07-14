@@ -1,7 +1,7 @@
 3689fa783c3684b08d590a680873446e03cfcf7b assets/tutorial/blockstates/ruby_ore.json
-8e02e8bdb0df465ed0ad66dbb5dfc726f354ed1e assets/tutorial/lang/en_us.json
-046e482f66eb33d2daac844f03bcf36ede7631bf assets/tutorial/lang/es_es.json
-e06d2f7a292a289b25bf64565b2f44b1eaac85bc assets/tutorial/lang/fr_fr.json
+086134cb3214f97fd7295b4e60b19ffae77d559e assets/tutorial/lang/en_us.json
+f5e0fae7bd3d3409f8d62ab4f404ea716272e557 assets/tutorial/lang/es_es.json
+a009f9adfb7b3b12b26ad4f26bc8a82331dd3eef assets/tutorial/lang/fr_fr.json
 18a878c54f43f4e1601ba58c3dc4f059ba0d6956 assets/tutorial/models/block/ruby_ore.json
 a5f58885f7085209f475659a0794badd513963d7 assets/tutorial/models/item/ruby.json
 7e8f821b1b5ff655f44342b76a9c1e2ebef9fdce assets/tutorial/models/item/ruby_boots.json
@@ -20,6 +20,7 @@ fb2e37314b566bbc8add71e8a65a4f6cf4673bbb data/tutorial/advancements/recipes/comb
 f79aec348a5e481cf4287996e70807268eb52f85 data/tutorial/advancements/recipes/combat/ruby_leggings.json
 ba40e7b06566aa068688eefed0cfb5bb3e8efef1 data/tutorial/advancements/recipes/misc/ruby_from_blasting.json
 774b14f60f235e2d9ab90af7862bb29de1ee1e19 data/tutorial/advancements/recipes/misc/ruby_from_smelting.json
+082245e6bd6cb134507ac33f2abb64882eb0c4d3 data/tutorial/advancements/story/mine_ruby.json
 948c9531c7e8ec4e0811e27acb6201fb34e49c61 data/tutorial/loot_tables/blocks/ruby_ore.json
 4ed4346201b559509218de2f67f0c0282edcc4fe data/tutorial/recipes/ruby_boots.json
 47cc56e1cf9bb4b328d6a863b646a99061fbfde6 data/tutorial/recipes/ruby_chestplate.json
