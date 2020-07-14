@@ -13,16 +13,19 @@ import io.github.championash5357.tutorial.init.TutorialBlocks;
 import io.github.championash5357.tutorial.init.TutorialItems;
 import io.github.championash5357.tutorial.proxy.IProxy;
 import io.github.championash5357.tutorial.server.proxy.ServerProxy;
+import io.github.championash5357.tutorial.world.biome.TutorialBiomeFeatures;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+@SuppressWarnings("deprecation")
 @Mod(Tutorial.ID)
 public class Tutorial {
 
@@ -49,7 +52,11 @@ public class Tutorial {
 		modEventBus.addListener(this::gatherData);
 	}
 	
-	private void commonSetup(final FMLCommonSetupEvent event) {}
+	private void commonSetup(final FMLCommonSetupEvent event) {
+		DeferredWorkQueue.runLater(() -> {
+			TutorialBiomeFeatures.applyBiomeFeatures();
+		});
+	}
 	
 	private void addRegistries(final IEventBus modEventBus) {
 		TutorialBlocks.BLOCKS.register(modEventBus);
