@@ -13,6 +13,7 @@ public class TutorialBlockLootTables extends BlockLootTables {
 		this.registerLootTable(TutorialBlocks.RUBY_ORE.get(), (block) -> {
 			return droppingItemWithFortune(block, TutorialItems.RUBY.get());
 		});
+		this.registerDropSelfLootTable(TutorialBlocks.WASHER.get());
 	}
 	
 	@Override

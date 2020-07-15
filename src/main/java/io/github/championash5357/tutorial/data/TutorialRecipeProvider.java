@@ -7,12 +7,14 @@ import javax.annotation.Nullable;
 import io.github.championash5357.tutorial.Tutorial;
 import io.github.championash5357.tutorial.init.TutorialBlocks;
 import io.github.championash5357.tutorial.init.TutorialItems;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.CookingRecipeBuilder;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.RecipeProvider;
 import net.minecraft.data.ShapedRecipeBuilder;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
@@ -28,8 +30,9 @@ public class TutorialRecipeProvider extends RecipeProvider implements ICondition
 	protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
 		addOreSmeltingRecipes(consumer, TutorialBlocks.RUBY_ORE.get(), TutorialItems.RUBY.get(), 1.0f, 200);
 		addBasicArmorRecipes(consumer, TutorialItems.RUBY.get(), TutorialItems.RUBY_HELMET.get(), TutorialItems.RUBY_CHESTPLATE.get(), TutorialItems.RUBY_LEGGINGS.get(), TutorialItems.RUBY_BOOTS.get());
+		ShapedRecipeBuilder.shapedRecipe(TutorialBlocks.WASHER.get()).key('I', Items.IRON_INGOT).key('W', Items.WATER_BUCKET).patternLine("III").patternLine("IWI").patternLine("III").addCriterion("in_water", enteredBlock(Blocks.WATER)).build(consumer);
 	}
-
+	
 	protected static void addBasicArmorRecipes(Consumer<IFinishedRecipe> consumer, IItemProvider material, @Nullable Item head, @Nullable Item chest, @Nullable Item legs, @Nullable Item feet) {
 		if(head != null) ShapedRecipeBuilder.shapedRecipe(head).key('X', material).patternLine("XXX").patternLine("X X").setGroup("helmets").addCriterion("has_material", hasItem(material)).build(consumer);
 		if(chest != null) ShapedRecipeBuilder.shapedRecipe(chest).key('X', material).patternLine("X X").patternLine("XXX").patternLine("XXX").setGroup("chestplates").addCriterion("has_material", hasItem(material)).build(consumer);

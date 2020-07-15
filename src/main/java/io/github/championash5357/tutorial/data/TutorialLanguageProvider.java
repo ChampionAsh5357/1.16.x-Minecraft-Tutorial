@@ -19,6 +19,7 @@ public class TutorialLanguageProvider extends LanguageProvider {
 		switch(locale) {
 		case "en_us":
 			addBlock(TutorialBlocks.RUBY_ORE, "Ruby Ore");
+			addBlock(TutorialBlocks.WASHER, "Washer");
 			
 			addItem(TutorialItems.RUBY, "Ruby");
 			addItem(TutorialItems.RUBY_HELMET, "Ruby Helmet");
@@ -31,6 +32,7 @@ public class TutorialLanguageProvider extends LanguageProvider {
 			break;
 		case "es_es":
 			addBlock(TutorialBlocks.RUBY_ORE, "Mena de rubí");
+			addBlock(TutorialBlocks.WASHER, "Lavadora");
 			
 			addItem(TutorialItems.RUBY, "Rubí");
 			addItem(TutorialItems.RUBY_HELMET, "Casco de rubí");
@@ -43,6 +45,7 @@ public class TutorialLanguageProvider extends LanguageProvider {
 			break;
 		case "fr_fr":
 			addBlock(TutorialBlocks.RUBY_ORE, "Minerai de rubis");
+			addBlock(TutorialBlocks.WASHER, "Machine à laver");
 			
 			addItem(TutorialItems.RUBY, "Rubis");
 			addItem(TutorialItems.RUBY_HELMET, "Casque de rubis");
