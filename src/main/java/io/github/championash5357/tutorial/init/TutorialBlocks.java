@@ -22,8 +22,8 @@ public class TutorialBlocks {
 
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Tutorial.ID);
 
-	public static final RegistryObject<Block> RUBY_ORE = register("ruby_ore", new Block(AbstractBlock.Properties.create(Material.ROCK).func_235861_h_().hardnessAndResistance(3.0f).harvestTool(ToolType.PICKAXE).harvestLevel(2)), block -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
-	public static final RegistryObject<WasherBlock> WASHER = register("washer", new WasherBlock(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.QUARTZ).func_235861_h_().hardnessAndResistance(3.0f).harvestTool(ToolType.PICKAXE).harvestLevel(1)), block -> new BlockItem(block, new Item.Properties().group(ItemGroup.DECORATIONS)));
+	public static final RegistryObject<Block> RUBY_ORE = register("ruby_ore", new Block(AbstractBlock.Properties.create(Material.ROCK).setRequiresTool().hardnessAndResistance(3.0f).harvestTool(ToolType.PICKAXE).harvestLevel(2)), block -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
+	public static final RegistryObject<WasherBlock> WASHER = register("washer", new WasherBlock(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.QUARTZ).setRequiresTool().hardnessAndResistance(3.0f).harvestTool(ToolType.PICKAXE).harvestLevel(1)), block -> new BlockItem(block, new Item.Properties().group(ItemGroup.DECORATIONS)));
 	
 	private static <V extends Block> RegistryObject<V> register(String id, V block, @Nullable Function<V, BlockItem> item) {
 		if(item != null) TutorialItems.ITEMS.register(id, () -> item.apply(block));
