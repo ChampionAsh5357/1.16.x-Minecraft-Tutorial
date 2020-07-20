@@ -4,9 +4,9 @@ import java.util.function.Consumer;
 
 import javax.annotation.Nullable;
 
-import io.github.championash5357.tutorial.Tutorial;
-import io.github.championash5357.tutorial.init.TutorialBlocks;
-import io.github.championash5357.tutorial.init.TutorialItems;
+import io.github.championash5357.tutorial.common.Tutorial;
+import io.github.championash5357.tutorial.common.init.TutorialBlocks;
+import io.github.championash5357.tutorial.common.init.TutorialItems;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.CookingRecipeBuilder;
 import net.minecraft.data.DataGenerator;

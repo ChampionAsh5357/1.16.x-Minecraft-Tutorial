@@ -1,4 +1,4 @@
-package io.github.championash5357.tutorial.util.text;
+package io.github.championash5357.tutorial.common.util.text;
 
 import net.minecraft.util.text.TranslationTextComponent;
 

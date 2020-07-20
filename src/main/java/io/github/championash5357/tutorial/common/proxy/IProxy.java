@@ -1,4 +1,4 @@
-package io.github.championash5357.tutorial.proxy;
+package io.github.championash5357.tutorial.common.proxy;
 
 import net.minecraftforge.eventbus.api.IEventBus;
 

@@ -1,7 +1,7 @@
 package io.github.championash5357.tutorial.client.proxy;
 
 import io.github.championash5357.tutorial.client.renderer.entity.model.RubyArmorModel;
-import io.github.championash5357.tutorial.proxy.IProxy;
+import io.github.championash5357.tutorial.common.proxy.IProxy;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraftforge.eventbus.api.IEventBus;

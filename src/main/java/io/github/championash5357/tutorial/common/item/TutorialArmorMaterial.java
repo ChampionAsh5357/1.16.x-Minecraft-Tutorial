@@ -1,9 +1,9 @@
-package io.github.championash5357.tutorial.item;
+package io.github.championash5357.tutorial.common.item;
 
 import java.util.function.Supplier;
 
-import io.github.championash5357.tutorial.Tutorial;
-import io.github.championash5357.tutorial.init.TutorialItems;
+import io.github.championash5357.tutorial.common.Tutorial;
+import io.github.championash5357.tutorial.common.init.TutorialItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;

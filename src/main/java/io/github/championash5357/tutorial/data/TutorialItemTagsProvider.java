@@ -1,7 +1,7 @@
 package io.github.championash5357.tutorial.data;
 
-import io.github.championash5357.tutorial.init.TutorialItems;
-import io.github.championash5357.tutorial.tags.TutorialTags;
+import io.github.championash5357.tutorial.common.init.TutorialItems;
+import io.github.championash5357.tutorial.common.tags.TutorialTags;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.ItemTagsProvider;

@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
-import io.github.championash5357.tutorial.Tutorial;
-import io.github.championash5357.tutorial.init.TutorialBlocks;
+import io.github.championash5357.tutorial.common.Tutorial;
+import io.github.championash5357.tutorial.common.init.TutorialBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.DataGenerator;

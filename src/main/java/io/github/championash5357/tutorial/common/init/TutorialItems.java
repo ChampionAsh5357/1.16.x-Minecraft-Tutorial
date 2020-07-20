@@ -1,8 +1,8 @@
-package io.github.championash5357.tutorial.init;
+package io.github.championash5357.tutorial.common.init;
 
-import io.github.championash5357.tutorial.Tutorial;
-import io.github.championash5357.tutorial.item.RubyArmorItem;
-import io.github.championash5357.tutorial.item.TutorialArmorMaterial;
+import io.github.championash5357.tutorial.common.Tutorial;
+import io.github.championash5357.tutorial.common.item.RubyArmorItem;
+import io.github.championash5357.tutorial.common.item.TutorialArmorMaterial;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;

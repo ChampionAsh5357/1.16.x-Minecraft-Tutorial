@@ -1,6 +1,10 @@
-package io.github.championash5357.tutorial;
+package io.github.championash5357.tutorial.common;
 
 import io.github.championash5357.tutorial.client.proxy.ClientProxy;
+import io.github.championash5357.tutorial.common.init.TutorialBlocks;
+import io.github.championash5357.tutorial.common.init.TutorialItems;
+import io.github.championash5357.tutorial.common.proxy.IProxy;
+import io.github.championash5357.tutorial.common.world.biome.TutorialBiomeFeatures;
 import io.github.championash5357.tutorial.data.TutorialAdvancementsProvider;
 import io.github.championash5357.tutorial.data.TutorialBlockStateProvider;
 import io.github.championash5357.tutorial.data.TutorialBlockTagsProvider;
@@ -9,11 +13,7 @@ import io.github.championash5357.tutorial.data.TutorialItemTagsProvider;
 import io.github.championash5357.tutorial.data.TutorialLanguageProvider;
 import io.github.championash5357.tutorial.data.TutorialLootTableProvider;
 import io.github.championash5357.tutorial.data.TutorialRecipeProvider;
-import io.github.championash5357.tutorial.init.TutorialBlocks;
-import io.github.championash5357.tutorial.init.TutorialItems;
-import io.github.championash5357.tutorial.proxy.IProxy;
-import io.github.championash5357.tutorial.server.proxy.ServerProxy;
-import io.github.championash5357.tutorial.world.biome.TutorialBiomeFeatures;
+import io.github.championash5357.tutorial.server.dedicated.proxy.DedicatedServerProxy;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,7 +31,7 @@ public class Tutorial {
 
 	public static final String ID = "tutorial";
 	
-	public static final IProxy PROXY = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> ServerProxy::new);
+	public static final IProxy PROXY = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> DedicatedServerProxy::new);
 	
 	private static final String[] LOCALE_CODES = new String[] {
 			"en_us",

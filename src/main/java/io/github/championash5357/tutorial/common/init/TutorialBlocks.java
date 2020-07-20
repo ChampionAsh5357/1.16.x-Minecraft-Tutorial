@@ -1,11 +1,11 @@
-package io.github.championash5357.tutorial.init;
+package io.github.championash5357.tutorial.common.init;
 
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import io.github.championash5357.tutorial.Tutorial;
-import io.github.championash5357.tutorial.block.WasherBlock;
+import io.github.championash5357.tutorial.common.Tutorial;
+import io.github.championash5357.tutorial.common.block.WasherBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

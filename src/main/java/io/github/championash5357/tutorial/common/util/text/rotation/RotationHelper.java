@@ -1,4 +1,4 @@
-package io.github.championash5357.tutorial.util.text.rotation;
+package io.github.championash5357.tutorial.common.util.text.rotation;
 
 import java.util.EnumMap;
 import java.util.Map;

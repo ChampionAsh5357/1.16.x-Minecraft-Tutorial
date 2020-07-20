@@ -1,12 +1,12 @@
-package io.github.championash5357.tutorial.world.biome;
+package io.github.championash5357.tutorial.common.world.biome;
 
 import java.util.List;
 import java.util.stream.Stream;
 
 import com.google.common.collect.Lists;
 
-import io.github.championash5357.tutorial.Tutorial;
-import io.github.championash5357.tutorial.init.TutorialBlocks;
+import io.github.championash5357.tutorial.common.Tutorial;
+import io.github.championash5357.tutorial.common.init.TutorialBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;

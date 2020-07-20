@@ -2,8 +2,8 @@ package io.github.championash5357.tutorial.data;
 
 import java.util.function.Supplier;
 
-import io.github.championash5357.tutorial.Tutorial;
-import io.github.championash5357.tutorial.init.TutorialItems;
+import io.github.championash5357.tutorial.common.Tutorial;
+import io.github.championash5357.tutorial.common.init.TutorialItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;

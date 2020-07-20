@@ -1,8 +1,8 @@
-package io.github.championash5357.tutorial.block;
+package io.github.championash5357.tutorial.common.block;
 
 import java.util.Map;
 
-import io.github.championash5357.tutorial.util.text.rotation.RotationHelper;
+import io.github.championash5357.tutorial.common.util.text.rotation.RotationHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.BlockItemUseContext;

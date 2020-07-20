@@ -1,7 +1,7 @@
 package io.github.championash5357.tutorial.data.loot;
 
-import io.github.championash5357.tutorial.init.TutorialBlocks;
-import io.github.championash5357.tutorial.init.TutorialItems;
+import io.github.championash5357.tutorial.common.init.TutorialBlocks;
+import io.github.championash5357.tutorial.common.init.TutorialItems;
 import net.minecraft.block.Block;
 import net.minecraft.data.loot.BlockLootTables;
 import net.minecraftforge.fml.RegistryObject;

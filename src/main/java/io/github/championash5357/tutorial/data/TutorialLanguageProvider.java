@@ -1,9 +1,9 @@
 package io.github.championash5357.tutorial.data;
 
-import io.github.championash5357.tutorial.Tutorial;
-import io.github.championash5357.tutorial.init.TutorialBlocks;
-import io.github.championash5357.tutorial.init.TutorialItems;
-import io.github.championash5357.tutorial.util.text.TextTranslations;
+import io.github.championash5357.tutorial.common.Tutorial;
+import io.github.championash5357.tutorial.common.init.TutorialBlocks;
+import io.github.championash5357.tutorial.common.init.TutorialItems;
+import io.github.championash5357.tutorial.common.util.text.TextTranslations;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 

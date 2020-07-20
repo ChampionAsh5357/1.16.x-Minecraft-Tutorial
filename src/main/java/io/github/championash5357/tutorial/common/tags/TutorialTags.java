@@ -1,6 +1,6 @@
-package io.github.championash5357.tutorial.tags;
+package io.github.championash5357.tutorial.common.tags;
 
-import io.github.championash5357.tutorial.Tutorial;
+import io.github.championash5357.tutorial.common.Tutorial;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.tags.BlockTags;
