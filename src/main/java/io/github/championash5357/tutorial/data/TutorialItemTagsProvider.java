@@ -24,6 +24,5 @@ public class TutorialItemTagsProvider extends ItemTagsProvider {
 		func_240522_a_(TutorialTags.Items.GEMS_RUBY).func_240534_a_(TutorialItems.RUBY.get());
 		
 		func_240522_a_(ItemTags.field_232908_Z_).func_240534_a_(TutorialItems.RUBY.get());
-		func_240522_a_(Tags.Items.BEACON_PAYMENT).func_240534_a_(TutorialItems.RUBY.get());
 	}
 }
