@@ -3,6 +3,7 @@ package io.github.championash5357.tutorial.common;
 import io.github.championash5357.tutorial.client.proxy.ClientProxy;
 import io.github.championash5357.tutorial.common.init.TutorialBlocks;
 import io.github.championash5357.tutorial.common.init.TutorialItems;
+import io.github.championash5357.tutorial.common.init.TutorialSounds;
 import io.github.championash5357.tutorial.common.proxy.IProxy;
 import io.github.championash5357.tutorial.common.world.biome.TutorialBiomeFeatures;
 import io.github.championash5357.tutorial.data.TutorialAdvancementsProvider;
@@ -13,6 +14,7 @@ import io.github.championash5357.tutorial.data.TutorialItemTagsProvider;
 import io.github.championash5357.tutorial.data.TutorialLanguageProvider;
 import io.github.championash5357.tutorial.data.TutorialLootTableProvider;
 import io.github.championash5357.tutorial.data.TutorialRecipeProvider;
+import io.github.championash5357.tutorial.data.TutorialSoundsProvider;
 import io.github.championash5357.tutorial.server.dedicated.proxy.DedicatedServerProxy;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
@@ -61,6 +63,7 @@ public class Tutorial {
 	private void addRegistries(final IEventBus modEventBus) {
 		TutorialBlocks.BLOCKS.register(modEventBus);
 		TutorialItems.ITEMS.register(modEventBus);
+		TutorialSounds.SOUNDS.register(modEventBus);
 	}
 	
 	private void gatherData(final GatherDataEvent event) {
@@ -72,6 +75,7 @@ public class Tutorial {
 			addLanguageProviders(gen);
 			gen.addProvider(new TutorialItemModelProvider(gen, helper));
 			gen.addProvider(new TutorialBlockStateProvider(gen, helper));
+			gen.addProvider(new TutorialSoundsProvider(gen));
 		}
 		if(event.includeServer()) {
 			TutorialBlockTagsProvider block_tags = new TutorialBlockTagsProvider(gen);

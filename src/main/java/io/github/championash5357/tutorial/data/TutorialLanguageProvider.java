@@ -1,10 +1,15 @@
 package io.github.championash5357.tutorial.data;
 
+import java.util.function.Supplier;
+
 import io.github.championash5357.tutorial.common.Tutorial;
 import io.github.championash5357.tutorial.common.init.TutorialBlocks;
 import io.github.championash5357.tutorial.common.init.TutorialItems;
+import io.github.championash5357.tutorial.common.init.TutorialSounds;
 import io.github.championash5357.tutorial.common.util.text.TextTranslations;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.common.data.LanguageProvider;
 
 public class TutorialLanguageProvider extends LanguageProvider {
@@ -27,6 +32,8 @@ public class TutorialLanguageProvider extends LanguageProvider {
 			addItem(TutorialItems.RUBY_LEGGINGS, "Ruby Leggings");
 			addItem(TutorialItems.RUBY_BOOTS, "Ruby Boots");
 			
+			addSubtitle(TutorialSounds.BLOCK_WASHER_RUNNING, "Washer Running");
+			
 			add(TextTranslations.ADVANCEMENT_MINE_RUBY_TITLE.getKey(), "Red Emeralds");
 			add(TextTranslations.ADVANCEMENT_MINE_RUBY_DESCRIPTION.getKey(), "Acquire rubies");
 			break;
@@ -39,6 +46,8 @@ public class TutorialLanguageProvider extends LanguageProvider {
 			addItem(TutorialItems.RUBY_CHESTPLATE, "Peto de rubí");
 			addItem(TutorialItems.RUBY_LEGGINGS, "Grebas de rubí");
 			addItem(TutorialItems.RUBY_BOOTS, "Botas de rubí");
+			
+			addSubtitle(TutorialSounds.BLOCK_WASHER_RUNNING, "Lavadora en funcionamiento");
 			
 			add(TextTranslations.ADVANCEMENT_MINE_RUBY_TITLE.getKey(), "Esmeraldas rojas");
 			add(TextTranslations.ADVANCEMENT_MINE_RUBY_DESCRIPTION.getKey(), "Consigue rubíes.");
@@ -53,11 +62,22 @@ public class TutorialLanguageProvider extends LanguageProvider {
 			addItem(TutorialItems.RUBY_LEGGINGS, "Jambières de rubis");
 			addItem(TutorialItems.RUBY_BOOTS, "Bottes de rubis");
 			
+			addSubtitle(TutorialSounds.BLOCK_WASHER_RUNNING, "Course à pied de machine à laver");
+			
 			add(TextTranslations.ADVANCEMENT_MINE_RUBY_TITLE.getKey(), "Émeraudes rouges");
 			add(TextTranslations.ADVANCEMENT_MINE_RUBY_DESCRIPTION.getKey(), "Obtenez des rubis.");
 			break;
 		default:
 			break;
 		}
+	}
+	
+	public void addSubtitle(Supplier<? extends SoundEvent> key, String name) {
+		add(key.get(), name);
+	}
+	
+	public void add(SoundEvent key, String name) {
+		ResourceLocation loc = key.getRegistryName();
+		add("subtitle." + loc.getNamespace() + "." + loc.getPath(), name);
 	}
 }

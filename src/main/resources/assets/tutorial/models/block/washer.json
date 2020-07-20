@@ -1,9 +1,9 @@
 {
   "parent": "tutorial:block/template_washer",
   "textures": {
-    "door": "block/light_blue_concrete",
-    "buttons": "block/poppy",
-    "base": "block/quartz_block_bottom",
-    "frame": "block/stone"
+    "door": "minecraft:block/light_blue_concrete",
+    "buttons": "minecraft:block/poppy",
+    "base": "minecraft:block/quartz_block_bottom",
+    "frame": "minecraft:block/stone"
   }
 }
