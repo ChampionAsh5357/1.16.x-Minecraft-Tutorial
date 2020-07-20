@@ -1,0 +1,11 @@
+{
+  "advancements.tutorial.story.mine_ruby.description": "Acquire rubies",
+  "advancements.tutorial.story.mine_ruby.title": "Red Emeralds",
+  "block.tutorial.ruby_ore": "Ruby Ore",
+  "block.tutorial.washer": "Washer",
+  "item.tutorial.ruby": "Ruby",
+  "item.tutorial.ruby_boots": "Ruby Boots",
+  "item.tutorial.ruby_chestplate": "Ruby Chestplate",
+  "item.tutorial.ruby_helmet": "Ruby Helmet",
+  "item.tutorial.ruby_leggings": "Ruby Leggings"
+}

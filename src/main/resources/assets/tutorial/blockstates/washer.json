@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "tutorial:block/washer"
+    },
+    "facing=south": {
+      "model": "tutorial:block/washer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tutorial:block/washer",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "tutorial:block/washer",
+      "y": 90
+    }
+  }
+}

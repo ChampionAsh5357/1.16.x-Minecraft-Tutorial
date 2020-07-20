@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "tutorial:ruby_helmet"
+    ]
+  },
+  "criteria": {
+    "has_material": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "tutorial:ruby"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tutorial:ruby_helmet"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_material",
+      "has_the_recipe"
+    ]
+  ]
+}

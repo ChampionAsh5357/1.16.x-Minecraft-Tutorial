@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "chestplates",
+  "pattern": [
+    "X X",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tutorial:ruby"
+    }
+  },
+  "result": {
+    "item": "tutorial:ruby_chestplate"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "IWI",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "result": {
+    "item": "tutorial:washer"
+  }
+}

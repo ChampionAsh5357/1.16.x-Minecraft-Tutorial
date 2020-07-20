@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:story/iron_tools",
+  "display": {
+    "icon": {
+      "item": "tutorial:ruby"
+    },
+    "title": {
+      "translate": "advancements.tutorial.story.mine_ruby.title"
+    },
+    "description": {
+      "translate": "advancements.tutorial.story.mine_ruby.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ruby": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "tutorial:ruby"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ruby"
+    ]
+  ]
+}
