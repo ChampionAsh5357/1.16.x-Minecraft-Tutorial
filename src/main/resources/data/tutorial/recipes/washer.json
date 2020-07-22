@@ -10,7 +10,7 @@
       "tag": "forge:ingots/iron"
     },
     "W": {
-      "tag": "forge:container/water"
+      "tag": "forge:containers/water"
     }
   },
   "result": {

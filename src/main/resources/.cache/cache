@@ -15,7 +15,7 @@ a4736320711deab66a269b9ce7122185635221e3 assets/tutorial/models/item/washer.json
 c065c6809404385373f7924fa44562b87b11b592 assets/tutorial/sounds.json
 b3fffa44da2bca9c02e85df223d4c388e614c41f data/forge/tags/blocks/ores.json
 233b98f4bf7e1f70b6d5f64ceeb43ddde5d86a5b data/forge/tags/blocks/ores/ruby.json
-f16042a50704b5f6a4c23287d75daf622e2cc856 data/forge/tags/items/container/water.json
+f16042a50704b5f6a4c23287d75daf622e2cc856 data/forge/tags/items/containers/water.json
 b4fdddf7320365a86f4027daf0b8116ba6c141a5 data/forge/tags/items/gems.json
 57b5b8fae4d7b75badd6054bcdbbd7bd50b9e366 data/forge/tags/items/gems/ruby.json
 b3fffa44da2bca9c02e85df223d4c388e614c41f data/forge/tags/items/ores.json
@@ -39,4 +39,4 @@ b9a95f71142683b5f9d480cc920194a37b29c0bb data/tutorial/recipes/ruby_from_blastin
 eb7f43e5eb49f197ecf747cdca0ec7e7473877ab data/tutorial/recipes/ruby_from_smelting.json
 0edd387f7b01db3c808b8cc1ba0d7e0db4f9a2af data/tutorial/recipes/ruby_helmet.json
 9700c4eb3c6c5a3d390006387d75bd9e72b685b1 data/tutorial/recipes/ruby_leggings.json
-efa812fd79e360b3f061424b44c2b27d4659bd3d data/tutorial/recipes/washer.json
+7f8fbf9137097019b20aa6ea73812407f90c1b3e data/tutorial/recipes/washer.json

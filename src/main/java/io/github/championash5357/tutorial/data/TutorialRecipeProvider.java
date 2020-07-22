@@ -33,7 +33,7 @@ public class TutorialRecipeProvider extends RecipeProvider implements ICondition
 	protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
 		addOreSmeltingRecipes(consumer, TutorialTags.Items.ORES_RUBY, TutorialItems.RUBY.get(), 1.0f, 200);
 		addBasicArmorRecipes(consumer, TutorialTags.Items.GEMS_RUBY, TutorialItems.RUBY_HELMET.get(), TutorialItems.RUBY_CHESTPLATE.get(), TutorialItems.RUBY_LEGGINGS.get(), TutorialItems.RUBY_BOOTS.get());
-		ShapedRecipeBuilder.shapedRecipe(TutorialBlocks.WASHER.get()).key('I', Tags.Items.INGOTS_IRON).key('W', TutorialTags.Items.CONTAINER_WATER).patternLine("III").patternLine("IWI").patternLine("III").addCriterion("in_water", enteredBlock(Blocks.WATER)).build(consumer);
+		ShapedRecipeBuilder.shapedRecipe(TutorialBlocks.WASHER.get()).key('I', Tags.Items.INGOTS_IRON).key('W', TutorialTags.Items.CONTAINERS_WATER).patternLine("III").patternLine("IWI").patternLine("III").addCriterion("in_water", enteredBlock(Blocks.WATER)).build(consumer);
 		addWasherRecipe(consumer, TutorialTags.Items.GEMS_RUBY, Items.EMERALD, 600, "gems");
 	}
 	

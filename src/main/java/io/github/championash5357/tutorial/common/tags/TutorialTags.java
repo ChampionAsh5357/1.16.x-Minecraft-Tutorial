@@ -28,7 +28,7 @@ public class TutorialTags {
 		
 		public static final ITag.INamedTag<Item> GEMS_RUBY = forge("gems/ruby");
 		public static final ITag.INamedTag<Item> ORES_RUBY = forge("ores/ruby");
-		public static final ITag.INamedTag<Item> CONTAINER_WATER = forge("container/water");
+		public static final ITag.INamedTag<Item> CONTAINERS_WATER = forge("containers/water");
 		
 		@SuppressWarnings("unused")
 		private static ITag.INamedTag<Item> tag(String id) {

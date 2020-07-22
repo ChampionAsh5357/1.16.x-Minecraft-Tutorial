@@ -23,7 +23,7 @@ public class TutorialItemTagsProvider extends ItemTagsProvider {
 		func_240522_a_(Tags.Items.GEMS).func_240531_a_(TutorialTags.Items.GEMS_RUBY);
 		
 		func_240522_a_(TutorialTags.Items.GEMS_RUBY).func_240534_a_(TutorialItems.RUBY.get());
-		func_240522_a_(TutorialTags.Items.CONTAINER_WATER).func_240534_a_(Items.WATER_BUCKET);
+		func_240522_a_(TutorialTags.Items.CONTAINERS_WATER).func_240534_a_(Items.WATER_BUCKET);
 		
 		func_240522_a_(ItemTags.field_232908_Z_).func_240534_a_(TutorialItems.RUBY.get());
 	}
