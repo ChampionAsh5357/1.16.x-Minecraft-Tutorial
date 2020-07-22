@@ -4,6 +4,7 @@ import io.github.championash5357.tutorial.client.proxy.ClientProxy;
 import io.github.championash5357.tutorial.common.init.TutorialBlocks;
 import io.github.championash5357.tutorial.common.init.TutorialItems;
 import io.github.championash5357.tutorial.common.init.TutorialSounds;
+import io.github.championash5357.tutorial.common.init.TutorialTileEntities;
 import io.github.championash5357.tutorial.common.proxy.IProxy;
 import io.github.championash5357.tutorial.common.world.biome.TutorialBiomeFeatures;
 import io.github.championash5357.tutorial.data.TutorialAdvancementsProvider;
@@ -64,6 +65,7 @@ public class Tutorial {
 		TutorialBlocks.BLOCKS.register(modEventBus);
 		TutorialItems.ITEMS.register(modEventBus);
 		TutorialSounds.SOUNDS.register(modEventBus);
+		TutorialTileEntities.TILE_ENTITIES.register(modEventBus);
 	}
 	
 	private void gatherData(final GatherDataEvent event) {

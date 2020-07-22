@@ -2,6 +2,7 @@ package io.github.championash5357.tutorial.common.block;
 
 import java.util.Map;
 
+import io.github.championash5357.tutorial.common.tileentity.WasherTileEntity;
 import io.github.championash5357.tutorial.common.util.text.rotation.RotationHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -9,6 +10,7 @@ import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer.Builder;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
@@ -76,5 +78,15 @@ public class WasherBlock extends Block {
 	@Override
 	protected void fillStateContainer(Builder<Block, BlockState> builder) {
 		builder.add(FACING);
+	}
+	
+	@Override
+	public boolean hasTileEntity(BlockState state) {
+		return true;
+	}
+	
+	@Override
+	public TileEntity createTileEntity(BlockState state, IBlockReader world) {
+		return new WasherTileEntity();
 	}
 }
