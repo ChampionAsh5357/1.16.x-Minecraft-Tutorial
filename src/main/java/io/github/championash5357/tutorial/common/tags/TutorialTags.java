@@ -22,6 +22,7 @@ public class TutorialTags {
 		
 		public static final ITag.INamedTag<Item> GEMS_RUBY = tag("gems/ruby");
 		public static final ITag.INamedTag<Item> ORES_RUBY = tag("ores/ruby");
+		public static final ITag.INamedTag<Item> CONTAINER_WATER = tag("container/water");
 		
 		private static ITag.INamedTag<Item> tag(String id) {
 			return ItemTags.makeWrapperTag(Tutorial.ID + ":" + id);

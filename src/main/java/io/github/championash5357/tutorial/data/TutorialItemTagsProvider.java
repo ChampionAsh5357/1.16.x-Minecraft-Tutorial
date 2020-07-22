@@ -5,6 +5,7 @@ import io.github.championash5357.tutorial.common.tags.TutorialTags;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.ItemTagsProvider;
+import net.minecraft.item.Items;
 import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.Tags;
 
@@ -22,6 +23,7 @@ public class TutorialItemTagsProvider extends ItemTagsProvider {
 		func_240522_a_(Tags.Items.GEMS).func_240531_a_(TutorialTags.Items.GEMS_RUBY);
 		
 		func_240522_a_(TutorialTags.Items.GEMS_RUBY).func_240534_a_(TutorialItems.RUBY.get());
+		func_240522_a_(TutorialTags.Items.CONTAINER_WATER).func_240534_a_(Items.WATER_BUCKET);
 		
 		func_240522_a_(ItemTags.field_232908_Z_).func_240534_a_(TutorialItems.RUBY.get());
 	}

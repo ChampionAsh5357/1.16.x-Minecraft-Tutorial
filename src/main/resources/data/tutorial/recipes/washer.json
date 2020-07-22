@@ -7,10 +7,10 @@
   ],
   "key": {
     "I": {
-      "item": "minecraft:iron_ingot"
+      "tag": "forge:ingots/iron"
     },
     "W": {
-      "item": "minecraft:water_bucket"
+      "tag": "tutorial:container/water"
     }
   },
   "result": {

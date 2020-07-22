@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "tutorial:ruby_ore"
+    "tag": "tutorial:ores/ruby"
   },
   "result": "tutorial:ruby",
   "experience": 1.0,

@@ -3,6 +3,7 @@ package io.github.championash5357.tutorial.common;
 import io.github.championash5357.tutorial.client.proxy.ClientProxy;
 import io.github.championash5357.tutorial.common.init.TutorialBlocks;
 import io.github.championash5357.tutorial.common.init.TutorialItems;
+import io.github.championash5357.tutorial.common.init.TutorialRecipes;
 import io.github.championash5357.tutorial.common.init.TutorialSounds;
 import io.github.championash5357.tutorial.common.init.TutorialTileEntities;
 import io.github.championash5357.tutorial.common.proxy.IProxy;
@@ -64,6 +65,7 @@ public class Tutorial {
 	private void addRegistries(final IEventBus modEventBus) {
 		TutorialBlocks.BLOCKS.register(modEventBus);
 		TutorialItems.ITEMS.register(modEventBus);
+		TutorialRecipes.RECIPES.register(modEventBus);
 		TutorialSounds.SOUNDS.register(modEventBus);
 		TutorialTileEntities.TILE_ENTITIES.register(modEventBus);
 	}

@@ -2,11 +2,11 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "tutorial:ruby_leggings"
+      "tutorial:emerald_from_washing"
     ]
   },
   "criteria": {
-    "has_material": {
+    "has_dirty_object": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "tutorial:ruby_leggings"
+        "recipe": "tutorial:emerald_from_washing"
       }
     }
   },
   "requirements": [
     [
-      "has_material",
+      "has_dirty_object",
       "has_the_recipe"
     ]
   ]
