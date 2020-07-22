@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#tutorial:gems/ruby"
+    "#forge:gems/ruby"
   ]
 }

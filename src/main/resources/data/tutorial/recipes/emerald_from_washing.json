@@ -2,7 +2,7 @@
   "type": "tutorial:washer",
   "group": "gems",
   "ingredient": {
-    "tag": "tutorial:gems/ruby"
+    "tag": "forge:gems/ruby"
   },
   "time": 600,
   "result": {

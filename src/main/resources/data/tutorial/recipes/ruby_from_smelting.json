@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "tutorial:ores/ruby"
+    "tag": "forge:ores/ruby"
   },
   "result": "tutorial:ruby",
   "experience": 1.0,

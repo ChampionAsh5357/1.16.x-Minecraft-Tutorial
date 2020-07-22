@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "tutorial:ores/ruby"
+            "tag": "forge:ores/ruby"
           }
         ]
       }
