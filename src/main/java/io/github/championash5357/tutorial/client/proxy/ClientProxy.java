@@ -2,7 +2,6 @@ package io.github.championash5357.tutorial.client.proxy;
 
 import io.github.championash5357.tutorial.client.renderer.entity.model.RubyArmorModel;
 import io.github.championash5357.tutorial.common.proxy.IProxy;
-import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -22,7 +21,8 @@ public class ClientProxy implements IProxy {
 	private void clientSetup(final FMLClientSetupEvent event) {}
 	
 	@SuppressWarnings("unchecked")
-	public <A extends BipedModel<?>> A getRubyArmorModel(EquipmentSlotType armorSlot) {
+	@Override
+	public <A> A getRubyArmorModel(EquipmentSlotType armorSlot) {
 		return (A) (armorSlot == EquipmentSlotType.LEGS ? rubyArmorLeggings : rubyArmorModel);
 	}
 }
