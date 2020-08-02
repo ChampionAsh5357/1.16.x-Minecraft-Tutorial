@@ -1,4 +1,4 @@
-package io.github.championash5357.tutorial.common.util.text.rotation;
+package io.github.championash5357.tutorial.common.util.rotation;
 
 /**
  * Base implementation of coordinate system used to handle models.

@@ -36,6 +36,8 @@ public class TutorialLanguageProvider extends LanguageProvider {
 			
 			add(TextTranslations.ADVANCEMENT_MINE_RUBY_TITLE.getKey(), "Red Emeralds");
 			add(TextTranslations.ADVANCEMENT_MINE_RUBY_DESCRIPTION.getKey(), "Acquire rubies");
+			add(TextTranslations.CONTAINER_WASHER.getKey(), "Washer");
+			add(TextTranslations.containerWasherTime(0).getKey(), "Wash Time: %s");
 			break;
 		case "es_es":
 			addBlock(TutorialBlocks.RUBY_ORE, "Mena de rubí");
@@ -51,6 +53,8 @@ public class TutorialLanguageProvider extends LanguageProvider {
 			
 			add(TextTranslations.ADVANCEMENT_MINE_RUBY_TITLE.getKey(), "Esmeraldas rojas");
 			add(TextTranslations.ADVANCEMENT_MINE_RUBY_DESCRIPTION.getKey(), "Consigue rubíes.");
+			add(TextTranslations.CONTAINER_WASHER.getKey(), "Lavadora");
+			add(TextTranslations.containerWasherTime(0).getKey(), "Tiempo de lavado: %s");
 			break;
 		case "fr_fr":
 			addBlock(TutorialBlocks.RUBY_ORE, "Minerai de rubis");
@@ -66,6 +70,8 @@ public class TutorialLanguageProvider extends LanguageProvider {
 			
 			add(TextTranslations.ADVANCEMENT_MINE_RUBY_TITLE.getKey(), "Émeraudes rouges");
 			add(TextTranslations.ADVANCEMENT_MINE_RUBY_DESCRIPTION.getKey(), "Obtenez des rubis.");
+			add(TextTranslations.CONTAINER_WASHER.getKey(), "Machine à laver");
+			add(TextTranslations.containerWasherTime(0).getKey(), "Temps de lavage: %s");
 			break;
 		default:
 			break;

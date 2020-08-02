@@ -1,4 +1,4 @@
-package io.github.championash5357.tutorial.common.util.text;
+package io.github.championash5357.tutorial.common.util;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;

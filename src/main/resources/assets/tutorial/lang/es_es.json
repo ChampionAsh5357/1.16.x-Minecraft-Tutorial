@@ -3,6 +3,8 @@
   "advancements.tutorial.story.mine_ruby.title": "Esmeraldas rojas",
   "block.tutorial.ruby_ore": "Mena de rub\u00ED",
   "block.tutorial.washer": "Lavadora",
+  "container.tutorial.washer": "Lavadora",
+  "container.tutorial.washer.time": "Tiempo de lavado: %s",
   "item.tutorial.ruby": "Rub\u00ED",
   "item.tutorial.ruby_boots": "Botas de rub\u00ED",
   "item.tutorial.ruby_chestplate": "Peto de rub\u00ED",

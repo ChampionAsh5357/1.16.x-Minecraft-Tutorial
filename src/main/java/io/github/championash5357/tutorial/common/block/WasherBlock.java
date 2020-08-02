@@ -3,23 +3,30 @@ package io.github.championash5357.tutorial.common.block;
 import java.util.Map;
 
 import io.github.championash5357.tutorial.common.tileentity.WasherTileEntity;
-import io.github.championash5357.tutorial.common.util.text.rotation.RotationHelper;
+import io.github.championash5357.tutorial.common.util.rotation.RotationHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer.Builder;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Direction;
+import net.minecraft.util.Hand;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.network.NetworkHooks;
 
 public class WasherBlock extends Block {
 
@@ -48,6 +55,18 @@ public class WasherBlock extends Block {
 	public WasherBlock(Properties properties) {
 		super(properties);
 		this.setDefaultState(this.getStateContainer().getBaseState().with(FACING, Direction.NORTH));
+	}
+	
+	@Override
+	public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+		TileEntity te = worldIn.getTileEntity(pos);
+		if(te instanceof WasherTileEntity && !((WasherTileEntity) te).isWashing()) {
+			if(!worldIn.isRemote) {
+				NetworkHooks.openGui((ServerPlayerEntity) player, (WasherTileEntity) te);
+			}
+			return ActionResultType.func_233537_a_(worldIn.isRemote);
+		}
+		return ActionResultType.PASS;
 	}
 	
 	@Override

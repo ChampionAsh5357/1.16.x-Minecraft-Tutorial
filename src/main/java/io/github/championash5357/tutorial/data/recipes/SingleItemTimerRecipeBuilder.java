@@ -6,7 +6,7 @@ import com.google.gson.JsonObject;
 
 import io.github.championash5357.tutorial.common.init.TutorialRecipes;
 import io.github.championash5357.tutorial.common.recipe.AbstractSingleItemTimerRecipe;
-import io.github.championash5357.tutorial.common.util.text.RecipeHelper;
+import io.github.championash5357.tutorial.common.util.RecipeHelper;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.ICriterionInstance;

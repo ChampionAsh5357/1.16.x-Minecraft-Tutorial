@@ -1,4 +1,4 @@
-package io.github.championash5357.tutorial.common.util.text.rotation;
+package io.github.championash5357.tutorial.common.util.rotation;
 
 import net.minecraft.util.Direction.Axis;
 import net.minecraft.util.math.vector.Vector3d;

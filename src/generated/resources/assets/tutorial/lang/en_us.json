@@ -3,6 +3,8 @@
   "advancements.tutorial.story.mine_ruby.title": "Red Emeralds",
   "block.tutorial.ruby_ore": "Ruby Ore",
   "block.tutorial.washer": "Washer",
+  "container.tutorial.washer": "Washer",
+  "container.tutorial.washer.time": "Wash Time: %s",
   "item.tutorial.ruby": "Ruby",
   "item.tutorial.ruby_boots": "Ruby Boots",
   "item.tutorial.ruby_chestplate": "Ruby Chestplate",

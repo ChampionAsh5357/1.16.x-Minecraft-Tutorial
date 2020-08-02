@@ -4,7 +4,7 @@
   "ingredient": {
     "tag": "forge:gems/ruby"
   },
-  "time": 600,
+  "time": 100,
   "result": {
     "item": "minecraft:emerald",
     "count": 1
