@@ -1,17 +1,17 @@
-package io.github.championash5357.tutorial.client.proxy;
+package io.github.championash5357.tutorial.client;
 
 import io.github.championash5357.tutorial.client.gui.screen.inventory.WasherScreen;
 import io.github.championash5357.tutorial.client.renderer.entity.model.RubyArmorModel;
+import io.github.championash5357.tutorial.common.ISidedReference;
 import io.github.championash5357.tutorial.common.init.TutorialContainerTypes;
 import io.github.championash5357.tutorial.common.inventory.container.WasherContainer;
-import io.github.championash5357.tutorial.common.proxy.IProxy;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
-public class ClientProxy implements IProxy {
+public class ClientReference implements ISidedReference {
 
 	private final RubyArmorModel rubyArmorModel = new RubyArmorModel(1.0f);
 	private final RubyArmorModel rubyArmorLeggings = new RubyArmorModel(0.5f);
@@ -39,6 +39,6 @@ public class ClientProxy implements IProxy {
 	@SuppressWarnings("unchecked")
 	@Override
 	public <A> A getRubyArmorModel(EquipmentSlotType armorSlot) {
-		return (A) (armorSlot == EquipmentSlotType.LEGS ? rubyArmorLeggings : rubyArmorModel);
+		return (A) (armorSlot == EquipmentSlotType.LEGS ? new RubyArmorModel(0.5f) : new RubyArmorModel(1.0f));
 	}
 }

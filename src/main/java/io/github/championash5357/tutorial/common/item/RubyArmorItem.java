@@ -16,6 +16,6 @@ public class RubyArmorItem extends ArmorItem {
 	
 	@Override
 	public <A extends BipedModel<?>> A getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-		return Tutorial.PROXY.getRubyArmorModel(armorSlot);
+		return Tutorial.SIDED_SYSTEM.getRubyArmorModel(armorSlot);
 	}
 }

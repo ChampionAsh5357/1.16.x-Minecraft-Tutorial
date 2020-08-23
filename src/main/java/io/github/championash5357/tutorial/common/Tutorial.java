@@ -1,13 +1,12 @@
 package io.github.championash5357.tutorial.common;
 
-import io.github.championash5357.tutorial.client.proxy.ClientProxy;
+import io.github.championash5357.tutorial.client.ClientReference;
 import io.github.championash5357.tutorial.common.init.TutorialBlocks;
 import io.github.championash5357.tutorial.common.init.TutorialContainerTypes;
 import io.github.championash5357.tutorial.common.init.TutorialItems;
 import io.github.championash5357.tutorial.common.init.TutorialRecipes;
 import io.github.championash5357.tutorial.common.init.TutorialSounds;
 import io.github.championash5357.tutorial.common.init.TutorialTileEntities;
-import io.github.championash5357.tutorial.common.proxy.IProxy;
 import io.github.championash5357.tutorial.common.world.biome.TutorialBiomeFeatures;
 import io.github.championash5357.tutorial.data.TutorialAdvancementsProvider;
 import io.github.championash5357.tutorial.data.TutorialBlockStateProvider;
@@ -18,7 +17,7 @@ import io.github.championash5357.tutorial.data.TutorialLanguageProvider;
 import io.github.championash5357.tutorial.data.TutorialLootTableProvider;
 import io.github.championash5357.tutorial.data.TutorialRecipeProvider;
 import io.github.championash5357.tutorial.data.TutorialSoundsProvider;
-import io.github.championash5357.tutorial.server.dedicated.proxy.DedicatedServerProxy;
+import io.github.championash5357.tutorial.server.dedicated.DedicatedServerReference;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import net.minecraftforge.common.MinecraftForge;
@@ -36,7 +35,7 @@ public class Tutorial {
 
 	public static final String ID = "tutorial";
 	
-	public static final IProxy PROXY = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> DedicatedServerProxy::new);
+	public static final ISidedReference SIDED_SYSTEM = DistExecutor.safeRunForDist(() -> ClientReference::new, () -> DedicatedServerReference::new);
 	
 	private static final String[] LOCALE_CODES = new String[] {
 			"en_us",
@@ -49,7 +48,7 @@ public class Tutorial {
 				forgeEventBus = MinecraftForge.EVENT_BUS;
 		
 		//Basic Setup
-		PROXY.setup(modEventBus, forgeEventBus);
+		SIDED_SYSTEM.setup(modEventBus, forgeEventBus);
 		addRegistries(modEventBus);
 		
 		//Mod Event Bus Listeners
