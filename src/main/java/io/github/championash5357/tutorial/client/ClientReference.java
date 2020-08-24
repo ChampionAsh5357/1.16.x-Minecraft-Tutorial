@@ -39,6 +39,6 @@ public class ClientReference implements ISidedReference {
 	@SuppressWarnings("unchecked")
 	@Override
 	public <A> A getRubyArmorModel(EquipmentSlotType armorSlot) {
-		return (A) (armorSlot == EquipmentSlotType.LEGS ? new RubyArmorModel(0.5f) : new RubyArmorModel(1.0f));
+		return (A) (armorSlot == EquipmentSlotType.LEGS ? rubyArmorLeggings : rubyArmorModel);
 	}
 }
