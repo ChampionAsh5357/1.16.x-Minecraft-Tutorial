@@ -39,7 +39,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                tutorial {
+                tutorial116x {
                     source sourceSets.main
                 }
             }
@@ -52,7 +52,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                tutorial {
+                tutorial116x {
                     source sourceSets.main
                 }
             }
@@ -67,7 +67,7 @@ minecraft {
             args '--mod', modId, '--all', '--output', file('src/generated/resources/')
 
             mods {
-                tutorial {
+                tutorial116x {
                     source sourceSets.main
                 }
             }
@@ -87,7 +87,7 @@ jar {
         attributes([
             "Specification-Title": "${title}",
             "Specification-Vendor": "${vendor}",
-            "Specification-Version": "1",
+            "Specification-Version": "${semver}",
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
             "Implementation-Vendor" :"${vendor}",
