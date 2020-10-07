@@ -19,9 +19,12 @@ public class Tutorial {
 		final IEventBus mod = FMLJavaModLoadingContext.get().getModEventBus(),
 				forge = MinecraftForge.EVENT_BUS;
 		
+		addRegistries(mod);
 		mod.addListener(this::setup);
 		SIDED_SYSTEM.setup(mod, forge);
 	}
 	
 	private void setup(final FMLCommonSetupEvent event) {}
+	
+	private void addRegistries(final IEventBus mod) {}
 }
