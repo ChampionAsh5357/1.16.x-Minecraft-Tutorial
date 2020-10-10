@@ -2,11 +2,13 @@ package io.github.championash5357.tutorial.common;
 
 import io.github.championash5357.tutorial.client.ClientReference;
 import io.github.championash5357.tutorial.server.dedicated.DedicatedServerReference;
+import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(Tutorial.ID)
@@ -21,10 +23,15 @@ public class Tutorial {
 		
 		addRegistries(mod);
 		mod.addListener(this::setup);
+		mod.addListener(this::data);
 		SIDED_SYSTEM.setup(mod, forge);
 	}
 	
 	private void setup(final FMLCommonSetupEvent event) {}
 	
 	private void addRegistries(final IEventBus mod) {}
+	
+	private void data(final GatherDataEvent event) {
+		DataGenerator gen = event.getGenerator();
+	}
 }

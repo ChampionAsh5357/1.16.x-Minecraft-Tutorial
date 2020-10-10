@@ -27,6 +27,10 @@ compileJava {
 	sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
 }
 
+sourceSets {
+    main.resources.srcDirs += 'src/generated/resources'
+}
+
 String mappingsType = channelType, vers = mappingVersion
 minecraft {
     mappings channel: mappingsType, version: vers
@@ -64,7 +68,7 @@ minecraft {
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', modId, '--all', '--output', file('src/generated/resources/')
+            args '--mod', modId, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources')
 
             mods {
                 tutorial116x {
@@ -73,6 +77,10 @@ minecraft {
             }
         }
     }
+}
+
+project.afterEvaluate {
+    minecraft.runs.data.args('--existing', configurations.minecraft.asPath.split(":").toList().find { it.contains("forge") }.split(";")[0])
 }
 
 dependencies {
