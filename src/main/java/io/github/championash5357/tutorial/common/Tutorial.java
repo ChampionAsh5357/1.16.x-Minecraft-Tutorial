@@ -4,6 +4,7 @@ import java.util.stream.Stream;
 
 import io.github.championash5357.tutorial.client.ClientReference;
 import io.github.championash5357.tutorial.data.client.*;
+import io.github.championash5357.tutorial.data.server.Recipes;
 import io.github.championash5357.tutorial.server.dedicated.DedicatedServerReference;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
@@ -42,6 +43,9 @@ public class Tutorial {
 			Stream.of("en_us", "es_es", "fr_fr").forEach(locale -> gen.addProvider(new Localization(gen, locale)));
 			gen.addProvider(new ItemModels(gen, helper));
 			gen.addProvider(new BlockStates(gen, helper));
+		}
+		if(event.includeServer()) {
+			gen.addProvider(new Recipes(gen));
 		}
 	}
 }
