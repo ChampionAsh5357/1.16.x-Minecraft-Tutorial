@@ -5,6 +5,7 @@ import java.util.stream.Stream;
 import io.github.championash5357.tutorial.client.ClientReference;
 import io.github.championash5357.tutorial.data.client.*;
 import io.github.championash5357.tutorial.data.server.Recipes;
+import io.github.championash5357.tutorial.data.server.loot_tables.LootTables;
 import io.github.championash5357.tutorial.data.server.tags.*;
 import io.github.championash5357.tutorial.server.dedicated.DedicatedServerReference;
 import net.minecraft.data.DataGenerator;
@@ -55,6 +56,7 @@ public class Tutorial {
 			gen.addProvider(new EnchantmentTags(gen, helper));
 			gen.addProvider(new TileEntityTypeTags(gen, helper));
 			gen.addProvider(new Recipes(gen));
+			gen.addProvider(new LootTables(gen));
 		}
 	}
 }
