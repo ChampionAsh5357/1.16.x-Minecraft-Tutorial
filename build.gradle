@@ -79,10 +79,6 @@ minecraft {
     }
 }
 
-project.afterEvaluate {
-    minecraft.runs.data.args('--existing', configurations.minecraft.asPath.split(":").toList().find { it.contains("forge") }.split(";")[0])
-}
-
 dependencies {
     minecraft 'net.minecraftforge:forge:' + mc + '-' + forge
 }
